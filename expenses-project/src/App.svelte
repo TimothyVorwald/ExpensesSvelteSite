@@ -2,9 +2,11 @@
   import svelteLogo from './assets/svelte.svg'
   import viteLogo from '/vite.svg'
   import Counter from './lib/Counter.svelte'
+  import NavBar from "./lib/Components/NavBar.svelte";
 </script>
 
 <main>
+  <NavBar />
   <div>
     <a href="https://vite.dev" target="_blank" rel="noreferrer">
       <img src={viteLogo} class="logo" alt="Vite Logo" />
@@ -29,6 +31,9 @@
 </main>
 
 <style>
+  body{
+    background-color: burlywood;
+  }
   .logo {
     height: 6em;
     padding: 1.5em;
