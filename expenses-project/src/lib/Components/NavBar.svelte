@@ -36,6 +36,5 @@
         width: 100%;
         padding: 10px;
         text-align: center;
-        background-color: burlywood;
     }
 </style>
