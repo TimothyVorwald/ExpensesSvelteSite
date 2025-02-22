@@ -3,6 +3,7 @@
   import SearchBar from "./lib/Components/SearchBar.svelte";
   import navigationPage from "./util/navigationPage";
   import CreditCardInfo from "./lib/Components/CreditCardInfo.svelte";
+  import BankInfo from "./lib/Components/BankInfo.svelte";
   
   let currentView = navigationPage.home;
 </script>
@@ -28,7 +29,8 @@
 
 {#if currentView === navigationPage.creditcard}
   <CreditCardInfo/>
-
+{:else if currentView === navigationPage.bank}
+  <BankInfo/>
 {/if}
 
 <style>
