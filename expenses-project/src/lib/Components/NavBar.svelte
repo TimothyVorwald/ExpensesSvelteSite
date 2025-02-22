@@ -1,6 +1,5 @@
 <script>
     import {Nav, NavItem, NavLink} from "@sveltestrap/sveltestrap";
-    import App from "../../App.svelte";
     import navigationPage from "../../util/navigationPage.js";
     
     export let currentView;

@@ -8,7 +8,7 @@
 </script>
 
 <div>
-  <NavBar class="navigation" bind:currentView/>
+  <NavBar bind:currentView on:click="{() => currentView}"/>
   <SearchBar/>
   
   <h1>Welcome!</h1>
@@ -31,12 +31,5 @@
 
 {/if}
 
-
-
-
 <style>
-  :global(.navigation){
-    text-align: center;
-    text-decoration: underline;
-  }
 </style>
