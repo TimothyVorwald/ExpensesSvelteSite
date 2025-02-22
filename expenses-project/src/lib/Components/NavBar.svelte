@@ -1,40 +1,33 @@
 <script>
+    import {Nav, NavItem, NavLink} from "@sveltestrap/sveltestrap";
+    import App from "../../App.svelte";
+    import navigationPage from "../../util/navigationPage.js";
     
+    export let currentView;
 </script>
 
 <div>
-    <nav>
-    <ul class="nav">
-        <li class="nav-item"><a>Home</a></li>
-        <li class="nav-item"><a>Credit Card</a></li>
-        <li class="nav-item"><a>Bank Info</a></li>
-    </ul>
-    </nav>
+    <Nav underline class="navigation">
+        <NavItem>
+            <NavLink href="#" active={currentView === navigationPage.home} 
+                     on:click={() => (currentView = navigationPage.home)}>Home</NavLink>
+        </NavItem>
+        <NavItem>
+            <NavLink href="#" active={currentView === navigationPage.creditcard} 
+                     on:click={() => (currentView = navigationPage.creditcard)}>Credit</NavLink>
+        </NavItem>
+        <NavItem>
+            <NavLink href="#" active={currentView === navigationPage.bank}
+                     on:click={() => (currentView = navigationPage.bank)}>Bank</NavLink>
+        </NavItem>
+    </Nav>
 </div>
 
 <style>
-    nav{
-        position: fixed;
-        top: 0;
-        left: 0;
-    }
-    ul{
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        overflow: hidden;
-        text-align: right;
-    }
-    li{
-        float: left;
-        text-decoration: underline;
-        cursor: pointer;
-    }
-    li a {
-        display: block;
-        width: 100%;
-        padding: 10px;
-        text-align: center;
+    :global(.navigation){
+        text-align: left;
+        display: flex;
+        justify-content: space-between;
+        text-decoration: none;
     }
 </style>

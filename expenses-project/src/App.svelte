@@ -1,10 +1,14 @@
 <script lang="ts">
   import NavBar from "./lib/Components/NavBar.svelte";
   import SearchBar from "./lib/Components/SearchBar.svelte";
+  import navigationPage from "./util/navigationPage";
+  import CreditCardInfo from "./lib/Components/CreditCardInfo.svelte";
+  
+  let currentView = navigationPage.home;
 </script>
 
 <div>
-  <NavBar/>
+  <NavBar class="navigation" bind:currentView/>
   <SearchBar/>
   
   <h1>Welcome!</h1>
@@ -22,8 +26,17 @@
   <h1>Thank You!!</h1>
 </div>
 
+{#if currentView === navigationPage.creditcard}
+  <CreditCardInfo/>
+
+{/if}
+
 
 
 
 <style>
+  :global(.navigation){
+    text-align: center;
+    text-decoration: underline;
+  }
 </style>

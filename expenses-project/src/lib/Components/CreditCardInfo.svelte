@@ -1,12 +1,5 @@
 <script>
-import NavBar from "./NavBar.svelte";
-import SearchBar from "./SearchBar.svelte";
 </script>
-
-<div>
-    <NavBar/>
-    <SearchBar/>
-</div>
 
 <div>
     <h1>Credit Card Information</h1>
