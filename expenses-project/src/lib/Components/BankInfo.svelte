@@ -1,10 +1,11 @@
 <script>
     import {onMount} from "svelte";
-    import {getStuff} from "../stores/store.js";
-import {Table} from "@sveltestrap/sveltestrap";
+    import {getStuff, getBankInfo} from "../stores/store.js";
+    import {Table} from "@sveltestrap/sveltestrap";
 
 onMount(() =>{
     getStuff();
+    getBankInfo();
 });
 
 </script>

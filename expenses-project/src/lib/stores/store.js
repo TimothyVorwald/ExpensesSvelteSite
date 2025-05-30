@@ -14,3 +14,16 @@ export function getStuff(){
             // always executed
         });
 }
+
+export function getBankInfo() {
+    axios.get('https://localhost:7216/Bank')
+        .then(function (response) {
+            console.log(response.data);
+        })
+        .catch(function (error) {
+            console.log(error);
+        })
+        .finally(function () {
+            //always executed
+        });
+}
